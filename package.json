@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "copy-env": "xcopy \"keys\" \"src\" /E /H /I /Y /R",
+    "serve": "npm run copy-env && npm i && ng serve",
+    "deploy": "firebase login && npm ci && ng build --configuration production --aot && firebase deploy"
   },
   "private": true,
   "dependencies": {
