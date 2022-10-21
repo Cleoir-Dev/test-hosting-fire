@@ -7,7 +7,7 @@
 
 # dependencies
 /node_modules
-/environments
+/src/environments
 /.angular
 
 # IDEs and editors
