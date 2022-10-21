@@ -9,6 +9,7 @@
 /node_modules
 /src/environments
 /.angular
+/keys
 
 # IDEs and editors
 /.idea
