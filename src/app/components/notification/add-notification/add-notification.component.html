@@ -1,0 +1,81 @@
+
+<div class="submit-form">
+  <div *ngIf="!submitted">
+    <button class="btn btn-primary" (click)="newNotification()">Nova Campanha</button>
+  </div>
+  <div *ngIf="submitted">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        Preencha os campos:
+      </div>
+      <div class="panel-footer">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+            [(ngModel)]="notification.title"
+            name="title"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="notification.description"
+            name="description"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="url">Url</label>
+          <input
+            type="text"
+            class="form-control"
+            id="url"
+            required
+            [(ngModel)]="notification.url"
+            name="url"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="img">Img</label>
+          <input
+            type="text"
+            class="form-control"
+            id="img"
+            required
+            [(ngModel)]="notification.img"
+            name="img"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="detailsId">DetailsId</label>
+          <input
+            type="text"
+            class="form-control"
+            id="detailsId"
+            required
+            [(ngModel)]="notification.detailsId"
+            name="detailsId"
+          />
+        </div>
+
+        <div class="buttons">
+          <button (click)="close()" class="btn btn-primary">Voltar</button>
+          <button (click)="sendNotification()" class="btn btn-success">Enviar Campanha</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
