@@ -27,7 +27,7 @@ export class FcmService {
         let httpOptions = {
           headers: new HttpHeaders({
             'Content-Type': 'application/json',
-            Authorization: 'Bearer' + response.result,
+            Authorization: `Bearer ${response.result}`,
           }),
         };
         this.httpClient
