@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {
   AngularFirestore,
-  AngularFirestoreCollection
+  AngularFirestoreCollection,
+  DocumentSnapshot
 } from '@angular/fire/compat/firestore';
 import { Notification } from 'src/app/shared/models/notification';
 

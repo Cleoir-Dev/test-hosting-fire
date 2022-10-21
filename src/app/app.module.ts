@@ -23,6 +23,7 @@ import { ListNotificationComponent } from './components/notification/list-notifi
 
 // routing
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 // service
 import { AuthService } from './shared/services/auth.service';
@@ -43,6 +44,7 @@ import { FirestoreService } from './shared/services/firestore.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
