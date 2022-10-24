@@ -36,7 +36,7 @@ export class FcmService {
             JSON.stringify(message),
             httpOptions
           )
-          .pipe(retry(2), catchError(this.handleError))
+          .pipe(retry(3), catchError(this.handleError))
           .subscribe(() => {
             resolve(true);
           });
@@ -56,7 +56,7 @@ export class FcmService {
     return await new Promise((resolve) => {
       this.httpClient
         .get<ResponseToken>(environment.apiOauthToken, httpOptions)
-        .pipe(retry(2), catchError(this.handleError))
+        .pipe(retry(3), catchError(this.handleError))
         .subscribe((response) => {
           resolve(response);
         });

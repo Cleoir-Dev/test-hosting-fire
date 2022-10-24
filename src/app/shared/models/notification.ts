@@ -6,10 +6,7 @@ export class Notification {
   url?: string;
   img?: string;
   detailsId?: number;
-  sent?: boolean;
-  cancel?: boolean;
-  isScheduled?: boolean;
-  scheduleTime?: Date;
-  test?: boolean;
+  dateSend?: Date;
+  tokenTest?: string;
 }
 
